@@ -6,12 +6,7 @@ const cors = require("cors");
 
 const app = express();
 const port = 3001;
-app.use(
-  cors({
-    origin: "https://effizient-lkqj.vercel.app",
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  })
-);
+app.use(cors());
 
 app.use(bodyParser.json());
 
