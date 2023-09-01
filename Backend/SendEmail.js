@@ -3,12 +3,19 @@ const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
 // const { userEmail, userPassword } = require("./config/keys");
-app.options('*', cors())
+
 const app = express();
 const port = 3001;
 app.use(cors());
 
 app.use(bodyParser.json());
+app.use(cors({
+  origin: "https://effizient-lkqj.vercel.app", 
+  methods: "GET, POST, PUT, DELETE", 
+  allowedHeaders: "Content-Type", 
+  credentials: true, 
+  optionsSuccessStatus: 200
+}));
 
 app.post("/sendEmail", (req, res) => {
   const data = req.body;
