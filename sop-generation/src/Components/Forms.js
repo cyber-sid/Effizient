@@ -43,7 +43,10 @@ function Forms() {
     console.log(JSON.stringify(formData));
 
     axios
-      .post(`http://localhost:${process.env.PORT || 3001}/sendEmail`, jsonData)
+      .post(
+        `https://vercel.com/cyber-sid/effizient/5rMj4P7MpLw1KjGuYP11NesiYD48/sendEmail`,
+        jsonData
+      )
       .then((response) => {
         alert("Email sent", response.data);
         setFormData({
