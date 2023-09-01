@@ -44,7 +44,7 @@ function Forms() {
 
     axios
       .post(
-        `https://vercel.com/cyber-sid/effizient/5rMj4P7MpLw1KjGuYP11NesiYD48/sendEmail`,
+        `https://efficient-backend.onrender.com/sendEmail`,
         jsonData
       )
       .then((response) => {
