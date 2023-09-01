@@ -12,8 +12,6 @@ app.use(bodyParser.json());
 app.use(cors({
   origin: "https://effizient-lkqj.vercel.app", 
   methods: "GET, POST, PUT, DELETE", 
-  allowedHeaders: "Content-Type", 
-  credentials: true, 
   optionsSuccessStatus: 200
 }));
 
